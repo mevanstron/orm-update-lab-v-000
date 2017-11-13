@@ -56,9 +56,12 @@ class Student
   #end
 
   def self.create(name, grade)
-    student = Student.new(name, grade).tap{|student| student.save}
+    Student.new(name, grade).tap{|student| student.save}
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
+    sql = <<-SQL
+      INSERT
+    SQL
   end
 end
