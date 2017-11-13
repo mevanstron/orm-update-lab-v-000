@@ -68,7 +68,7 @@ class Student
       SELECT * FROM students WHERE name = ?
       SQL
 
-    DB[:conn].execute(sql, name).tap{|student| self.new_from_db(student)}
+    DB[:conn].execute(sql, name).first.tap{|student| self.new_from_db(student)}
   end
 
 end
