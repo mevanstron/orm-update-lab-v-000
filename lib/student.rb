@@ -61,5 +61,6 @@ class Student
 
   def self.new_from_db(row)
     Student.new(row[0], row[1], row[2]).tap{|student| student.save}
+    binding.pry
   end
 end
