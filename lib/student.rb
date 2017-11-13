@@ -4,7 +4,7 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id
 
-  def initialize(name, grade, id = nil)
+  def initialize(id = nil, name, grade)
     @id = id
     @name = name
     @grade = grade
@@ -61,6 +61,5 @@ class Student
 
   def self.new_from_db(row)
     Student.new(row[0], row[1], row[2]).tap{|student| student.save}
-    binding.pry
   end
 end
