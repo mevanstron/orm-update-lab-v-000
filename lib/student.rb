@@ -70,5 +70,5 @@ class Student
 
     DB[:conn].execute(sql, name).tap{|student| self.new_from_db(student)}
   end
-  
+
 end
