@@ -9,7 +9,7 @@ class Student
     @name = name
     @grade = grade
   end
-  
+
 
 
 end
