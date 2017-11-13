@@ -67,7 +67,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = ?
       SQL
-      bingind.pry
+      binding.pry
     DB[:conn].execute(sql, name).first.tap{|student| self.new_from_db(student)}
   end
 
